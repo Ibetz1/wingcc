@@ -47,7 +47,7 @@ wingcc list of available commands:
 
 **build** build your project
 ```
-wingcc.exe build --src src --lib lib -linker-arg--inc include -include-arg--out build/my_app.exe --std c++17 --arg -gcc-arg --run --no-clean --no-save
+wingcc.exe build --src src --lib lib -linker-arg --inc include -include-arg--out build/my_app.exe --std c++17 --arg -gcc-arg --run --no-clean --no-save
 ```
 
 **run** run your built project
