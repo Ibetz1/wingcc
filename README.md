@@ -17,7 +17,7 @@ To install and use this CLI tool, follow these steps:
 2. **Clone the Repository**: Clone this repository to your local machine using the following command:
    
 ```bash
-g++ -o cli_tool main.cpp
+git clone https://github.com/Ibetz1/wingcc.git
 ```
 
 3. **Build the CLI Tool**: Navigate to the directory where you cloned the repository and build the CLI tool using GCC G++. Run the following command:
