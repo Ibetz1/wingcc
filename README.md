@@ -32,17 +32,17 @@ wingcc list of available commands:
 
 **list of params**
 ```
---src   >> source dirs -> Ex: (src/)
---lib   >> linked library dirs -> Ex: (lib/)
---inc   >> include dirs -> Ex: (include/)
---out   >> output folder & executable name -> Ex: (build/) or (build/build.exe)
---std   >> version of c++ Ex: (c++17)
---arg   >> args for g++ Ex: (-Wall)
---run   >> will run after building
---no-clean   >> will not clean obj files after building
---del-exe   >> will delete executible after cleaning
---no-save   >> will not cache build command
---no-cache   >> will not read from command cache
+--src            | source dirs -> Ex: (src/)
+--lib            | linked library dirs -> Ex: (lib/)
+--inc            | include dirs -> Ex: (include/)
+--out            | output folder & executable name -> Ex: (build/) or (build/build.exe)
+--std            | version of c++ Ex: (c++17)
+--arg            | args for g++ Ex: (-Wall)
+--run            | will run after building
+--no-clean       | will not clean obj files after building
+--del-exe        | will delete executible after cleaning
+--no-save        | will not cache build command
+--no-cache       | will not read from command cache
 ```
 
 **build** build your project
