@@ -1,4 +1,4 @@
-# CLI Tool: Windows Command Line Interface
+# WINGCC: Windows Command Line Interface
 
 This is a command-line interface (CLI) tool written in C++ specifically designed to run on the Windows operating system. It offers various functionalities for users to interact with their system and perform specific tasks efficiently.
 
@@ -17,13 +17,13 @@ To install and use this CLI tool, follow these steps:
 2. **Clone the Repository**: Clone this repository to your local machine using the following command:
    
 ```bash
-git clone https://github.com/your-username/cli-tool.git
+g++ -o cli_tool main.cpp
 ```
 
 3. **Build the CLI Tool**: Navigate to the directory where you cloned the repository and build the CLI tool using GCC G++. Run the following command:
 
 ```bash
-g++ -o cli_tool main.cpp
+g++ src/*.cpp -I include -o bin/wingcc.exe
 ```
 
 ## Contributing
