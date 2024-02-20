@@ -134,20 +134,29 @@ string get_include_dirs() {
     get user defined linker args
 */
 string get_linker_args() {
+
     string linker_arg = "";
+
+
     if (args.count(LNK_DIR)) {
         vector<string> folders = verify_dir_list(fetch_command_params(args.at(LNK_DIR)));
         vector<string> params  = fetch_command_args(args.at(LNK_DIR));
 
         linker_arg.append("-L ");
         if (folders.size()) {
-            for (string folder : folders) {
-                vector<string> files = get_file_list(folder, ".a");
-                linker_arg.append(format_vector_string(files));
+            if (args.count(REC_LNK)) {
+                for (string folder : folders) {
+                    vector<string> files = get_file_list(folder, ".a");
+                    linker_arg.append(format_vector_string(files));
+                }
+            } else {
+                linker_arg.append(format_vector_string(folders));
             }
         }
+
         linker_arg.append(format_vector_string(params));
     }
+
     return linker_arg;
 }
 
@@ -213,8 +222,8 @@ string push_cache_param(ofstream& file, string param_name) {
     string param = "[" + string(param_name) + "]";
     for (string arg : args.at(param_name)) {
         param.append(" " + arg);
-        file << param << endl;
     }
+    file << param << endl;
     return param;
 }
 

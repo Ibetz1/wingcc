@@ -43,11 +43,12 @@ wingcc list of available commands:
 --del-exe        |    will delete executible after cleaning
 --no-save        |    will not cache build command
 --no-cache       |    will not read from command cache
+--exp-lnk        |    will expand linked dirs to target each file
 ```
 
 **build** build your project
 ```
-wingcc.exe build --src src --lib lib -linker-arg --inc include -include-arg--out build/my_app.exe --std c++17 --arg -gcc-arg --run --no-clean --no-save
+wingcc.exe build --src src --lib lib -linker-arg --inc include -include-arg --out build/my_app.exe --std c++17 --arg -gcc-arg --run --no-clean --no-save --exp-link
 ```
 
 **run** run your built project

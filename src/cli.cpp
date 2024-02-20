@@ -35,6 +35,7 @@ void print_help() {
     cout << "--" << DEL_EXE << "   >> will delete executible after cleaning" << endl;
     cout << "--" << NO_SAVE << "   >> will not cache build command" << endl;
     cout << "--" << NO_CACHE << "   >> will not read from command cache" << endl;
+    cout << "--" << REC_LNK << "   >> will expand linked dirs to target each unit" << endl;
     cout << "----------------------------" << endl << endl;
 
     // example build
@@ -42,11 +43,12 @@ void print_help() {
     cout << GEN_BUILD << " this will build your project example: " << endl; 
     cout << "wingcc.exe " << GEN_BUILD << " ";
     cout << "--" << SRC_DIR << " src ";
-    cout << "--" << LNK_DIR << " lib -linker-arg";
-    cout << "--" << INC_DIR << " include -include-arg";
+    cout << "--" << LNK_DIR << " lib -linker-arg ";
+    cout << "--" << INC_DIR << " include -include-arg ";
     cout << "--" << OUT_DIR << " build/my_app.exe ";
     cout << "--" << STD_ARG << " c++17 ";
     cout << "--" << GCC_ARG << " -gcc-arg ";
+    cout << "--" << LNK_DIR << " ";
     cout << "--" << RUN_BUILD << " ";
     cout << "--" << NO_CLEAN << " ";
     cout << "--" << NO_SAVE << endl;
@@ -196,6 +198,7 @@ void make_cache() {
     push_cache_param(build_script, OUT_DIR);
     push_cache_param(build_script, GCC_ARG);
     push_cache_param(build_script, STD_ARG);
+    push_cache_param(build_script, REC_LNK);
     push_cache_param(build_script, NO_CLEAN);
 
     build_script.close();

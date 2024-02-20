@@ -28,6 +28,7 @@
 #define NO_SAVE  "no-save"  // cancels saving of commands during build
 #define NO_CACHE "no-cache" // does not attempt to read from cache
 #define DEL_EXE  "del-exe"  // deletes the built executible during clean
+#define REC_LNK  "exp-lnk"  // expands linkage to target each file
 
 // tools
 #define GEN_BUILD   "build"     // runs a build script
