@@ -45,27 +45,27 @@ wingcc list of available commands:
 --no-cache   >> will not read from command cache
 ```
 
-**build** this will build your project
+**build** build your project
 ```
 wingcc.exe build --src src --lib lib -linker-arg--inc include -include-arg--out build/my_app.exe --std c++17 --arg -gcc-arg --run --no-clean --no-save
 ```
 
-**run** this will run your built project
+**run** run your built project
 ```
 wingcc.exe run --out build/ --no-clean
 ```
 
-**clean** this will clean your build folder
+**clean** clean your build folder
 ```
 wingcc.exe clean --out build/ --del-exe
 ```
 
-**del-cache** this will delete the cache
+**del-cache** delete the cache
 ```
 wingcc.exe del-cache
 ```
 
-**mod-cache** this will update params in your cache:
+**mod-cache** update the params in your cache:
 ```
 wingcc.exe mod-cache --src src --lib lib --inc include --out build/my_app.exe --std c++17 --arg -Wall -g --run --no-clean
 ```
